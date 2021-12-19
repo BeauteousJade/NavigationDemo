@@ -34,6 +34,7 @@ class NavContainerFragment : Fragment() {
     private fun addViewWithClickListener(text: String, onClickListener: View.OnClickListener) {
         val button = Button(context).apply {
             this.text = text
+            isAllCaps = false
             setOnClickListener(onClickListener)
         }
         mViewGroup.addView(
