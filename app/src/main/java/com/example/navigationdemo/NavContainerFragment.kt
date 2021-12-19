@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 
 class NavContainerFragment : Fragment() {
@@ -25,8 +26,10 @@ class NavContainerFragment : Fragment() {
         addViewWithClickListener("跳转到NavChildFragmentA") {
             findNavController().navigate(R.id.action_to_child_a)
         }
+        val newId = View.generateViewId();
+        findNavController().currentDestination?.putAction(newId, R.id.fragment_nav_child_b)
         addViewWithClickListener("跳转到NavChildFragmentB") {
-            findNavController().navigate(R.id.action_to_child_b)
+            findNavController().navigate(newId)
         }
     }
 

@@ -10,9 +10,6 @@
         <action
             android:id="@+id/action_to_child_a"
             app:destination="@id/fragment_nav_child_a" />
-        <action
-            android:id="@+id/action_to_child_b"
-            app:destination="@id/fragment_nav_child_b" />
     </fragment>
 
     <fragment
