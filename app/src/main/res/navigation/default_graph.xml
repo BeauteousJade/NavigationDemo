@@ -18,6 +18,9 @@
 
     <fragment
         android:id="@+id/fragment_nav_child_b"
-        android:name="com.example.navigationdemo.NavChildFragmentB" />
+        android:name="com.example.navigationdemo.NavChildFragmentB">
+        <!--        创建deepLink，使外部能够该链接能够跳进来-->
+        <deepLink app:uri="www.jade.com" />
+    </fragment>
 
 </navigation>

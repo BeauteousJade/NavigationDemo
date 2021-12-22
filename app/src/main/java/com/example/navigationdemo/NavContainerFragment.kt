@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
@@ -30,6 +31,9 @@ class NavContainerFragment : Fragment() {
         findNavController().currentDestination?.putAction(newId, R.id.fragment_nav_child_b)
         addViewWithClickListener("跳转到NavChildFragmentB") {
             findNavController().navigate(newId)
+        }
+        addViewWithClickListener("使用deepLink跳转到NavChildFragmentB") {
+            findNavController().navigate("https://www.jade.com".toUri())
         }
     }
 
