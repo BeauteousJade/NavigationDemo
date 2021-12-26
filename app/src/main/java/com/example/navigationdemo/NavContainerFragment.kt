@@ -35,6 +35,9 @@ class NavContainerFragment : Fragment() {
         addViewWithClickListener("使用deepLink跳转到NavChildFragmentB") {
             findNavController().navigate("https://www.jade.com".toUri())
         }
+        addViewWithClickListener("使用SafeArgs跳转到NavChildFragmentB") {
+            findNavController().navigate(NavContainerFragmentDirections.actionToChildA())
+        }
     }
 
 
