@@ -14,13 +14,26 @@
 
     <fragment
         android:id="@+id/fragment_nav_child_a"
-        android:name="com.example.navigationdemo.NavChildFragmentA" />
+        android:name="com.example.navigationdemo.NavChildFragmentA">
+
+        <action
+            android:id="@+id/action_child_a_to_b_by_popUp"
+            app:destination="@id/fragment_nav_child_b"
+            app:popUpTo="@id/fragment_nav_child_b"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragment_nav_child_b"
         android:name="com.example.navigationdemo.NavChildFragmentB">
         <!--        创建deepLink，使外部能够该链接能够跳进来-->
         <deepLink app:uri="www.jade.com" />
+
+        <action
+            android:id="@+id/action_child_b_to_a_by_popUp"
+            app:destination="@id/fragment_nav_child_a"
+            app:popUpTo="@id/fragment_nav_child_a"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

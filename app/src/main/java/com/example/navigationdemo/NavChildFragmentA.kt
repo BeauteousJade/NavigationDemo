@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class NavChildFragmentA : Fragment() {
 
@@ -17,6 +18,9 @@ class NavChildFragmentA : Fragment() {
         val view = inflater.inflate(R.layout.fragment_child, container, false)
         val textView = view.findViewById<TextView>(R.id.textView)
         textView.text = "我是NavChildFragmentA"
+        view.setOnClickListener {
+            findNavController().navigate(R.id.action_child_a_to_b_by_popUp)
+        }
         return view
     }
 }
