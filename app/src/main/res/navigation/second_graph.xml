@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/second_graph"
+    app:startDestination="@id/second_graph_fragment">
+
+    <fragment
+        android:id="@+id/second_graph_fragment"
+        android:name="com.example.navigationdemo.SecondGraphFragment" />
+
+    <deepLink app:uri="http://www.second.com" />
+
+</navigation>

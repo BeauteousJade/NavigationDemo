@@ -38,6 +38,9 @@ class NavContainerFragment : Fragment() {
         addViewWithClickListener("使用SafeArgs跳转到NavChildFragmentB") {
             findNavController().navigate(NavContainerFragmentDirections.actionToChildA())
         }
+        addViewWithClickListener("使用deepLink跳转到SecondGraphFragment") {
+            findNavController().navigate("http://www.second.com".toUri())
+        }
     }
 
 

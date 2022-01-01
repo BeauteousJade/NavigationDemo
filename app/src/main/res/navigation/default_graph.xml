@@ -4,6 +4,8 @@
     android:id="@+id/default_graph"
     app:startDestination="@id/fragment_container">
 
+    <include app:graph="@navigation/second_graph" />
+
     <fragment
         android:id="@+id/fragment_container"
         android:name="com.example.navigationdemo.NavContainerFragment">
