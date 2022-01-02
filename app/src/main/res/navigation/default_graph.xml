@@ -12,6 +12,10 @@
         <action
             android:id="@+id/action_to_child_a"
             app:destination="@id/fragment_nav_child_a" />
+
+        <action
+            android:id="@+id/action_to_back_stack_activity"
+            app:destination="@id/test_back_stack_activity" />
     </fragment>
 
     <fragment
@@ -37,5 +41,9 @@
             app:popUpTo="@id/fragment_nav_child_a"
             app:popUpToInclusive="true" />
     </fragment>
+
+    <activity
+        android:id="@+id/test_back_stack_activity"
+        android:name="com.example.navigationdemo.TestBackActivity" />
 
 </navigation>

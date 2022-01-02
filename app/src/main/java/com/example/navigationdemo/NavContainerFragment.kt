@@ -41,6 +41,9 @@ class NavContainerFragment : Fragment() {
         addViewWithClickListener("使用deepLink跳转到SecondGraphFragment") {
             findNavController().navigate("http://www.second.com".toUri())
         }
+        addViewWithClickListener("跳转到BackStackActivity") {
+            findNavController().navigate(R.id.action_to_back_stack_activity)
+        }
     }
 
 
