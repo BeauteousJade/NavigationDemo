@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
-class SecondGraphFragment: Fragment() {
+class SecondGraphFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,6 +18,9 @@ class SecondGraphFragment: Fragment() {
         val view = inflater.inflate(R.layout.fragment_child, container, false)
         val textView = view.findViewById<TextView>(R.id.textView)
         textView.text = "我是SearchGraphFragment"
+        view.setOnClickListener {
+            findNavController().navigate(R.id.action_second_to_A)
+        }
         return view
     }
 }

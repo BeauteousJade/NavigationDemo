@@ -6,7 +6,12 @@
 
     <fragment
         android:id="@+id/second_graph_fragment"
-        android:name="com.example.navigationdemo.SecondGraphFragment" />
+        android:name="com.example.navigationdemo.SecondGraphFragment">
+
+        <action
+            android:id="@+id/action_second_to_A"
+            app:destination="@+id/fragment_nav_child_a" />
+    </fragment>
 
     <deepLink app:uri="http://www.second.com" />
 
