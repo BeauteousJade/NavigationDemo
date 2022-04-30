@@ -6,7 +6,7 @@
 
     <include app:graph="@navigation/second_graph" />
 
-    <fragment
+    <KeepStateFragment
         android:id="@+id/fragment_container"
         android:name="com.example.navigationdemo.NavContainerFragment">
         <action
@@ -16,18 +16,18 @@
         <action
             android:id="@+id/action_to_back_stack_activity"
             app:destination="@id/test_back_stack_activity" />
-    </fragment>
+    </KeepStateFragment>
 
-    <fragment
+    <KeepStateFragment
         android:id="@+id/fragment_nav_child_a"
         android:name="com.example.navigationdemo.NavChildFragmentA">
 
         <action
             android:id="@+id/action_child_a_to_b_by_popUp"
             app:destination="@id/fragment_nav_child_b" />
-    </fragment>
+    </KeepStateFragment>
 
-    <fragment
+    <KeepStateFragment
         android:id="@+id/fragment_nav_child_b"
         android:name="com.example.navigationdemo.NavChildFragmentB">
         <!--        创建deepLink，使外部能够该链接能够跳进来-->
@@ -37,7 +37,7 @@
             android:id="@+id/action_child_b_to_a_by_popUp"
             app:popUpTo="@id/fragment_nav_child_a"
             app:popUpToInclusive="false" />
-    </fragment>
+    </KeepStateFragment>
 
     <activity
         android:id="@+id/test_back_stack_activity"

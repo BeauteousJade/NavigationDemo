@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
-class NavChildFragmentA : Fragment() {
+class NavChildFragmentA : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 
-class NavContainerFragment : Fragment() {
+class NavContainerFragment : BaseFragment() {
 
     private lateinit var mViewGroup: ViewGroup
     override fun onCreateView(
