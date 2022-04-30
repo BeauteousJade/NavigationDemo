@@ -24,9 +24,7 @@
 
         <action
             android:id="@+id/action_child_a_to_b_by_popUp"
-            app:destination="@id/fragment_nav_child_b"
-            app:popUpTo="@id/fragment_nav_child_b"
-            app:popUpToInclusive="true" />
+            app:destination="@id/fragment_nav_child_b" />
     </fragment>
 
     <fragment
@@ -37,9 +35,8 @@
 
         <action
             android:id="@+id/action_child_b_to_a_by_popUp"
-            app:destination="@id/fragment_nav_child_a"
             app:popUpTo="@id/fragment_nav_child_a"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
 
     <activity
